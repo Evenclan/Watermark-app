@@ -83,7 +83,7 @@ const startApp = async () => {
     if (fs.existsSync(`./img/${options.inputImage}`) && fs.existsSync(`./img/${options.watermarkImage}`)) {
     addImageWatermarkToImage('./img/' + options.inputImage, './img/' + prepareOutputFilename(options.inputImage), './img/' + options.watermarkImage);
   } else {
-    console.log('oops, input file or watermark file is valid');
+    console.log('oops, input file name or watermark file name is invalid');
   }}
 
 };
