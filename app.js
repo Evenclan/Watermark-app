@@ -67,6 +67,7 @@ const startApp = async () => {
 
     if (fs.existsSync(`./img/${options.inputImage}`)) {
     addTextWatermarkToImage('./img/' + options.inputImage, './img/' + prepareOutputFilename(options.inputImage), options.watermarkText);
+    console.log('congratulations brave hero, you made it!')
     } else {
       console.log('oops, something went wrong');
     }
@@ -82,10 +83,11 @@ const startApp = async () => {
 
     if (fs.existsSync(`./img/${options.inputImage}`) && fs.existsSync(`./img/${options.watermarkImage}`)) {
     addImageWatermarkToImage('./img/' + options.inputImage, './img/' + prepareOutputFilename(options.inputImage), './img/' + options.watermarkImage);
+    console.log('congratulations brave hero, you made it!')
   } else {
     console.log('oops, input file name or watermark file name is invalid');
   }}
-
+  
 };
 
 startApp();
